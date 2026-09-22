@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Auction House | Premium Bidding</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="logo">AUCTION<span>HOUSE</span></div><nav>
+<a href="#home">Home</a><a href="#auctions">Auctions</a><a href="#about">About</a><a href="#blog">Blog</a><a href="#contact">Contact</a><button onclick="openModal('login')">Login</button>
+</nav></header>
+<main>
+<section id="home" class="hero"><div><p class="eyebrow">PREMIUM ONLINE AUCTIONS</p><h1>Discover. Bid.<br><span>Own Something Rare.</span></h1><p>Explore exceptional collectibles, art, watches and luxury items from trusted sellers.</p><button class="primary" onclick="document.querySelector('#auctions').scrollIntoView({behavior:'smooth'})">Explore Auctions</button></div></section>
+<section id="auctions" class="section"><div class="section-head"><div><p class="eyebrow">LIVE & UPCOMING</p><h2>Featured Auctions</h2></div><div class="filters"><select id="categoryFilter" onchange="renderAuctions()"><option value="all">All Categories</option><option>Art</option><option>Watches</option><option>Collectibles</option><option>Jewelry</option></select><select id="sortFilter" onchange="renderAuctions()"><option value="ending">Ending Soon</option><option value="price">Highest Bid</option></select></div></div><div id="auctionGrid" class="grid"></div></section>
+<section class="section dark"><div class="stats"><div><b>12K+</b><span>Registered Bidders</span></div><div><b>4.8K</b><span>Items Sold</span></div><div><b>98%</b><span>Happy Sellers</span></div><div><b>24/7</b><span>Live Auctions</span></div></div></section>
+<section id="about" class="section split"><div><p class="eyebrow">OUR STORY</p><h2>A Modern Auction House Built on Trust.</h2><p>We connect collectors and sellers through a secure, transparent bidding experience. Every listing is carefully presented so you can bid with confidence.</p><button class="secondary" onclick="openModal('register')">Register to Bid</button></div><div class="about-card"><div>EST. 2012</div><strong>Curated treasures.<br>Transparent bidding.</strong></div></section>
+<section id="blog" class="section"><p class="eyebrow">FROM THE JOURNAL</p><h2>Auction News & Insights</h2><div class="blog-grid"><article><span>MARKET INSIGHTS</span><h3>How to Build a Valuable Collection</h3><p>Practical tips for new and experienced collectors.</p></article><article><span>AUCTION NEWS</span><h3>What Makes an Item Truly Rare?</h3><p>Understanding provenance, condition and demand.</p></article><article><span>GUIDE</span><h3>Smart Bidding Strategies</h3><p>Set your limit, watch the clock and bid confidently.</p></article></div></section>
+<section id="contact" class="section contact"><div><p class="eyebrow">GET IN TOUCH</p><h2>Contact Our Team</h2><p>Chennai, Tamil Nadu, India</p><p>+91 98765 43210 · hello@auctionhouse.example</p></div><form onsubmit="submitContact(event)"><input required placeholder="Your name"><input required type="email" placeholder="Email address"><textarea required placeholder="Your inquiry"></textarea><button class="primary">Send Inquiry</button></form></section>
+</main>
+<footer><div class="logo">AUCTION<span>HOUSE</span></div><p>© 2026 Auction House. Demo internship project.</p></footer>
+
+<div id="modal" class="modal"><div class="modal-box"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
+<script src="script.js"></script></body></html>
